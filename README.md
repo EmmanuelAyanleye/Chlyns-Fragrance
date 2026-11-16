@@ -12,7 +12,7 @@ It is plain HTML, CSS and JavaScript with no backend and no build step. Every or
 index.html       the page
 css/style.css    all styles
 js/settings.js   WhatsApp number and email
-js/main.js       WhatsApp links, mobile menu, scroll effects
+js/main.js       WhatsApp links, scent finder, opening hours, mobile menu
 assets/          images and icon
 ```
 
