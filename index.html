@@ -1,498 +1,279 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>Chlyn’s Fragrance | Luxury Perfumes & Premium Scents</title>
- 
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
- 
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
- 
-     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
- 
-     <link rel="stylesheet" href="css/style.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chlyn’s Fragrance | Luxury Perfumes in Porto-Novo</title>
+    <meta name="description" content="Chlyn’s Fragrance offers luxury perfumes, timeless classics and Arabian scents in Porto-Novo, Benin. Tell us your style and order on WhatsApp.">
+    <meta name="theme-color" content="#0f0e0c">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chlyn’s Fragrance | Luxury Perfumes in Porto-Novo">
+    <meta property="og:description" content="Signature perfumes, timeless classics and Arabian scents. Order on WhatsApp.">
+    <meta property="og:image" content="https://emmanuelayanleye.github.io/Chlyns-Fragrance/assets/og.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <script>document.documentElement.classList.add("js")</script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-     <style>
-         body{background:#111111;color:#ffffff;}
-         .hero-content,.section-pad,.footer{position:relative;z-index:2;}
-         [data-aos]{opacity:1 !important;transform:none !important;}
-     </style>
- </head>
- <body>
-     <div id="pageLoader" class="page-loader">
-         <div class="loader-core">
-             <div class="loader-ring"></div>
-             <div class="loader-brand">Chlyn’s Fragrance</div>
-         </div>
-     </div>
+<header class="header" id="top">
+    <div class="container header-inner">
+        <a class="logo" href="#top" aria-label="Chlyn’s Fragrance, back to top">
+            <span class="logo-mark" aria-hidden="true">C</span>
+            <span class="logo-text">Chlyn’s <em>Fragrance</em></span>
+        </a>
+        <nav class="nav" id="nav" aria-label="Main">
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+            <a href="#how-to-order">How to order</a>
+            <a href="#contact">Contact</a>
+            <a class="btn btn-gold nav-cta" href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I’d like to order a perfume. Can you help me choose?" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                Order on WhatsApp
+            </a>
+        </nav>
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+            <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+    </div>
+</header>
 
-     <script>
-         window.addEventListener('load', () => {
-             const loader = document.getElementById('pageLoader');
-             if (!loader) return;
-             window.setTimeout(() => loader.classList.add('hidden'), 250);
-         });
-         window.setTimeout(() => {
-             const loader = document.getElementById('pageLoader');
-             if (!loader) return;
-             loader.classList.add('hidden');
-         }, 3500);
-     </script>
- 
-     <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark luxury-nav fixed-top">
-         <div class="container">
-             <a class="navbar-brand brand-mark" href="index.html">Chlyn’s Fragrance</a>
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
-             </button>
-             <div class="collapse navbar-collapse" id="navMenu">
-                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                     <li class="nav-item"><a class="nav-link" href="pages/shop.html">Shop</a></li>
-                     <li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li>
-                     <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
-                     <li class="nav-item ms-lg-3">
-                         <a class="nav-link position-relative" href="pages/cart.html" aria-label="Cart">
-                             <i class="bi bi-bag"></i>
-                             <span id="cartCount" class="cart-badge">0</span>
-                         </a>
-                     </li>
-                 </ul>
-             </div>
-         </div>
-     </nav>
- 
-     <header class="hero" id="top">
-         <div class="hero-bg"></div>
-         <div class="hero-overlay"></div>
-         <div class="container hero-content">
-             <div class="row align-items-center">
-                 <div class="col-lg-7">
-                     <div class="hero-kicker" data-aos="fade-up" data-aos-delay="50">Premium scents • Porto-Novo</div>
-                     <h1 class="hero-title" data-aos="fade-up" data-aos-delay="120">Luxury Fragrances That Define Your Presence</h1>
-                     <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="180">Discover signature perfumes, timeless classics, and bold modern blends — curated for elegance, confidence, and long-lasting impression.</p>
-                     <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="240">
-                         <a href="pages/shop.html" class="btn btn-gold btn-lg">Shop Now</a>
-                         <a href="#featured" class="btn btn-outline-gold btn-lg">Explore Collection</a>
-                     </div>
-                     <div class="hero-highlights" data-aos="fade-up" data-aos-delay="300">
-                         <div class="highlight-pill"><i class="bi bi-patch-check"></i> Curated premium sourcing</div>
-                         <div class="highlight-pill"><i class="bi bi-hourglass-split"></i> Long-lasting selections</div>
-                         <div class="highlight-pill"><i class="bi bi-whatsapp"></i> Fast WhatsApp support</div>
-                     </div>
-                 </div>
-                 <div class="col-lg-5 d-none d-lg-block">
-                     <div class="hero-card hero-card-readable" data-aos="zoom-in" data-aos-delay="200">
-                         <div class="hero-card-top">
-                             <div class="hero-card-badge"><i class="bi bi-stars"></i> Best Seller</div>
-                             <div class="hero-card-title">Baccarat Rouge 540</div>
-                             <div class="hero-card-note">A radiant, addictive signature</div>
-                         </div>
-                         <div class="hero-card-media" aria-hidden="true">
-                             <img src="https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?auto=format&fit=crop&w=1200&q=80" alt="Baccarat Rouge 540" />
-                         </div>
-                         <div class="hero-card-actions">
-                             <a class="btn btn-sm btn-gold" href="pages/product-details.html?id=br540">View Details</a>
-                             <button class="btn btn-sm btn-outline-gold" data-quick-view="br540">Quick View</button>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </header>
+<main id="main">
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <p class="eyebrow reveal">Luxury perfumes · Porto-Novo</p>
+                <h1 class="reveal">Fragrances that define your <em>presence</em></h1>
+                <p class="lead reveal">Signature perfumes, timeless classics and rich Arabian scents, chosen to last all day. Tell us your style and we’ll help you find the one.</p>
+                <div class="hero-actions reveal">
+                    <a class="btn btn-gold" href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I’d like to order a perfume. Can you help me choose?" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                        Order on WhatsApp
+                    </a>
+                    <a class="btn btn-ghost" href="#collections">Explore collections</a>
+                </div>
+                <ul class="trust reveal">
+                    <li>Original fragrances</li>
+                    <li>Long-lasting picks</li>
+                    <li>Fast replies on WhatsApp</li>
+                </ul>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="arch">
+                    <img src="assets/hero.webp" srcset="assets/hero-640.webp 640w, assets/hero.webp 1200w" sizes="(max-width: 900px) 80vw, 460px" alt="A gold perfume bottle resting on an open magazine" width="1200" height="1800" fetchpriority="high">
+                </div>
+                <div class="hero-badge">
+                    <strong>Gift-ready</strong>
+                    <span>Every order carefully packed</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-     <section class="section-pad hero-float-strip">
-         <div class="container">
-             <div class="row g-4" data-aos="fade-up">
-                 <div class="col-md-4">
-                     <div class="mini-lux">
-                         <div class="mini-lux-ic"><i class="bi bi-gem"></i></div>
-                         <div>
-                             <div class="mini-lux-title">Luxury feel</div>
-                             <div class="mini-lux-text">Premium selections with elegant presentation.</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-4">
-                     <div class="mini-lux">
-                         <div class="mini-lux-ic"><i class="bi bi-truck"></i></div>
-                         <div>
-                             <div class="mini-lux-title">Smooth delivery</div>
-                             <div class="mini-lux-text">Fast coordination around Porto-Novo & nearby.</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-4">
-                     <div class="mini-lux">
-                         <div class="mini-lux-ic"><i class="bi bi-chat-heart"></i></div>
-                         <div>
-                             <div class="mini-lux-title">Personal guidance</div>
-                             <div class="mini-lux-text">Tell us your vibe — we recommend confidently.</div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </section>
- 
-     <section id="featured" class="section-pad section-glow glow-left">
-         <div class="container">
-             <div class="section-head" data-aos="fade-up">
-                 <div class="section-eyebrow">Featured Collection</div>
-                 <h2 class="section-title">Curated Premium Picks</h2>
-                 <p class="section-desc">A refined selection of iconic fragrances — crafted for standout presence.</p>
-             </div>
-             <div id="featuredGrid" class="row g-4">
-                 <div class="col-sm-6 col-lg-4">
-                     <div class="card bg-transparent border-0 h-100">
-                         <div class="p-3" style="border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);box-shadow:0 14px 40px rgba(0,0,0,.35);">
-                             <div class="ratio ratio-4x3" style="border-radius:16px; overflow:hidden;">
-                                 <img src="https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?auto=format&fit=crop&w=1200&q=80" alt="Baccarat Rouge 540" style="width:100%; height:100%; object-fit:cover;" />
-                             </div>
-                             <div class="mt-3">
-                                 <div class="fw-semibold">Baccarat Rouge 540</div>
-                                 <div class="text-muted small">Maison Francis Kurkdjian • Unisex</div>
-                                 <div class="d-flex gap-2 flex-wrap mt-3">
-                                     <a class="btn btn-gold btn-sm" href="pages/product-details.html?id=br540"><i class="bi bi-box-arrow-up-right"></i> Details</a>
-                                     <a class="btn btn-outline-gold btn-sm" href="pages/shop.html"><i class="bi bi-bag"></i> Shop</a>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-sm-6 col-lg-4">
-                     <div class="card bg-transparent border-0 h-100">
-                         <div class="p-3" style="border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);box-shadow:0 14px 40px rgba(0,0,0,.35);">
-                             <div class="ratio ratio-4x3" style="border-radius:16px; overflow:hidden;">
-                                 <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1200&q=80" alt="Dior Sauvage" style="width:100%; height:100%; object-fit:cover;" />
-                             </div>
-                             <div class="mt-3">
-                                 <div class="fw-semibold">Dior Sauvage</div>
-                                 <div class="text-muted small">Dior • Men</div>
-                                 <div class="d-flex gap-2 flex-wrap mt-3">
-                                     <a class="btn btn-gold btn-sm" href="pages/product-details.html?id=sauvage"><i class="bi bi-box-arrow-up-right"></i> Details</a>
-                                     <a class="btn btn-outline-gold btn-sm" href="pages/shop.html?category=men"><i class="bi bi-funnel"></i> Men</a>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-sm-6 col-lg-4">
-                     <div class="card bg-transparent border-0 h-100">
-                         <div class="p-3" style="border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);box-shadow:0 14px 40px rgba(0,0,0,.35);">
-                             <div class="ratio ratio-4x3" style="border-radius:16px; overflow:hidden;">
-                                 <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=1200&q=80" alt="Bleu De Chanel" style="width:100%; height:100%; object-fit:cover;" />
-                             </div>
-                             <div class="mt-3">
-                                 <div class="fw-semibold">Bleu De Chanel</div>
-                                 <div class="text-muted small">Chanel • Men</div>
-                                 <div class="d-flex gap-2 flex-wrap mt-3">
-                                     <a class="btn btn-gold btn-sm" href="pages/product-details.html?id=bleu"><i class="bi bi-box-arrow-up-right"></i> Details</a>
-                                     <a class="btn btn-outline-gold btn-sm" href="pages/shop.html"><i class="bi bi-bag"></i> Shop</a>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="text-center mt-5" data-aos="fade-up">
-                 <a href="pages/shop.html" class="btn btn-outline-gold btn-lg">View Full Shop</a>
-             </div>
-         </div>
-     </section>
+    <section class="section" id="collections" aria-labelledby="collections-title">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="eyebrow">Our collections</p>
+                <h2 id="collections-title">Find your <em>signature</em></h2>
+                <p>From fresh everyday scents to deep oud statements. Pick a style and ask us what is available today.</p>
+            </div>
+            <div class="collections">
+                <article class="collection reveal c-men">
+                    <span class="collection-num" aria-hidden="true">01</span>
+                    <h3>Men’s perfumes</h3>
+                    <p>Fresh · Bold · Magnetic</p>
+                    <a class="text-link" href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I’m interested in your men’s perfumes. What do you have available right now?" target="_blank" rel="noopener">Ask about men’s perfumes <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </article>
+                <article class="collection reveal c-women">
+                    <span class="collection-num" aria-hidden="true">02</span>
+                    <h3>Women’s perfumes</h3>
+                    <p>Elegant · Floral · Radiant</p>
+                    <a class="text-link" href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I’m interested in your women’s perfumes. What do you have available right now?" target="_blank" rel="noopener">Ask about women’s perfumes <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </article>
+                <article class="collection reveal c-unisex">
+                    <span class="collection-num" aria-hidden="true">03</span>
+                    <h3>Unisex</h3>
+                    <p>Modern · Versatile · Clean</p>
+                    <a class="text-link" href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I’m interested in your unisex perfumes. What do you have available right now?" target="_blank" rel="noopener">Ask about unisex scents <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </article>
+                <article class="collection reveal c-arabian">
+                    <span class="collection-num" aria-hidden="true">04</span>
+                    <h3>Arabian fragrances</h3>
+                    <p>Oud · Amber · Opulent</p>
+                    <a class="text-link" href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I’m interested in your Arabian fragrances. What do you have available right now?" target="_blank" rel="noopener">Ask about Arabian scents <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </article>
+                <article class="collection reveal c-luxury">
+                    <span class="collection-num" aria-hidden="true">05</span>
+                    <h3>Luxury collection</h3>
+                    <p>Rare · Iconic · Exclusive</p>
+                    <a class="text-link" href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I’m interested in your luxury collection. What do you have available right now?" target="_blank" rel="noopener">Ask about the luxury range <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </article>
+                <article class="collection collection-cta reveal">
+                    <h3>Not sure what suits you?</h3>
+                    <p>Tell us what you like and your budget, and we’ll suggest a few options.</p>
+                    <a class="btn btn-gold btn-sm" href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I’d like a recommendation. I like scents that are: " target="_blank" rel="noopener">Get a recommendation</a>
+                </article>
+            </div>
+        </div>
+    </section>
 
-     <section class="section-pad section-glow glow-right">
-         <div class="container">
-             <div class="section-head" data-aos="fade-up">
-                 <div class="section-eyebrow">Categories</div>
-                 <h2 class="section-title">Shop by Style</h2>
-                 <p class="section-desc">From fresh everyday profiles to deep oud statements — choose your mood.</p>
-             </div>
-             <div class="row g-4">
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60">
-                     <a class="cat-tile" href="pages/shop.html?category=men">
-                         <div class="cat-tile-bg" style="background-image:url('https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=1200&q=80');"></div>
-                         <div class="cat-tile-ov"></div>
-                         <div class="cat-tile-body">
-                             <div class="cat-tile-title">Men’s Perfume</div>
-                             <div class="cat-tile-sub">Fresh • Bold • Magnetic</div>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="110">
-                     <a class="cat-tile" href="pages/shop.html?category=women">
-                         <div class="cat-tile-bg" style="background-image:url('https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?auto=format&fit=crop&w=1200&q=80');"></div>
-                         <div class="cat-tile-ov"></div>
-                         <div class="cat-tile-body">
-                             <div class="cat-tile-title">Women’s Perfume</div>
-                             <div class="cat-tile-sub">Elegant • Floral • Radiant</div>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
-                     <a class="cat-tile" href="pages/shop.html?category=unisex">
-                         <div class="cat-tile-bg" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80');"></div>
-                         <div class="cat-tile-ov"></div>
-                         <div class="cat-tile-body">
-                             <div class="cat-tile-title">Unisex</div>
-                             <div class="cat-tile-sub">Modern • Versatile • Clean</div>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="60">
-                     <a class="cat-tile" href="pages/shop.html?category=arabian">
-                         <div class="cat-tile-bg" style="background-image:url('https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=1400&q=80');"></div>
-                         <div class="cat-tile-ov"></div>
-                         <div class="cat-tile-body">
-                             <div class="cat-tile-title">Arabian Fragrances</div>
-                             <div class="cat-tile-sub">Oud • Amber • Opulent</div>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="110">
-                     <a class="cat-tile" href="pages/shop.html?category=luxury">
-                         <div class="cat-tile-bg" style="background-image:url('https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=1400&q=80');"></div>
-                         <div class="cat-tile-ov"></div>
-                         <div class="cat-tile-body">
-                             <div class="cat-tile-title">Luxury Collection</div>
-                             <div class="cat-tile-sub">Rare • Iconic • Exclusive</div>
-                         </div>
-                     </a>
-                 </div>
-             </div>
-         </div>
-     </section>
+    <section class="section section-alt" id="about" aria-labelledby="about-title">
+        <div class="container about">
+            <div class="about-visual reveal">
+                <img src="assets/about.webp" srcset="assets/about-560.webp 560w, assets/about.webp 1000w" sizes="(max-width: 900px) 90vw, 480px" alt="A perfume bottle beside green leaves" width="1000" height="1333" loading="lazy">
+            </div>
+            <div class="about-text">
+                <p class="eyebrow reveal">About us</p>
+                <h2 id="about-title" class="reveal">A boutique fragrance experience in <em>Porto-Novo</em></h2>
+                <p class="reveal">We help you choose scents that match your style, from fresh daily wear to rich oud for special evenings. Every bottle is chosen for how it smells, how long it lasts and how it feels to wear.</p>
+                <p class="reveal">Not sure where to start? Send us a message, tell us what you like, and we’ll recommend something you’ll love.</p>
+                <ul class="features">
+                    <li class="reveal">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+                        <div><strong>Original fragrances</strong><span>Sourced with care, so you get the real scent.</span></div>
+                    </li>
+                    <li class="reveal">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 22h14M5 2h14M17 22v-4.2a2 2 0 0 0-.6-1.4L12 12l-4.4 4.4a2 2 0 0 0-.6 1.4V22M7 2v4.2a2 2 0 0 0 .6 1.4L12 12l4.4-4.4a2 2 0 0 0 .6-1.4V2"/></svg>
+                        <div><strong>Long-lasting scents</strong><span>Picks that stay with you from morning to night.</span></div>
+                    </li>
+                    <li class="reveal">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
+                        <div><strong>Affordable luxury</strong><span>Premium scents across a range of budgets.</span></div>
+                    </li>
+                    <li class="reveal">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>
+                        <div><strong>Gift-ready packaging</strong><span>Carefully packed, perfect for gifting.</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-     <section class="section-pad section-alt">
-         <div class="container">
-             <div class="section-head" data-aos="fade-up">
-                 <div class="section-eyebrow">Why Choose Us</div>
-                 <h2 class="section-title">A Premium Experience</h2>
-                 <p class="section-desc">Luxury is more than a scent — it’s service, guidance, and presentation.</p>
-             </div>
-             <div class="row g-4">
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60"><div class="icon-tile"><i class="bi bi-patch-check"></i><div><div class="icon-tile-title">Original Fragrances</div><div class="icon-tile-text">Authenticity-first curation and sourcing focus.</div></div></div></div>
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="110"><div class="icon-tile"><i class="bi bi-hourglass-split"></i><div><div class="icon-tile-title">Long Lasting Scents</div><div class="icon-tile-text">Selection includes high-performing options.</div></div></div></div>
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160"><div class="icon-tile"><i class="bi bi-gem"></i><div><div class="icon-tile-title">Affordable Luxury</div><div class="icon-tile-text">Premium vibe across accessible price ranges.</div></div></div></div>
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60"><div class="icon-tile"><i class="bi bi-chat-heart"></i><div><div class="icon-tile-title">Fast Customer Response</div><div class="icon-tile-text">Quick WhatsApp replies and recommendations.</div></div></div></div>
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="110"><div class="icon-tile"><i class="bi bi-shield-lock"></i><div><div class="icon-tile-title">Trusted Vendor</div><div class="icon-tile-text">Transparent communication and premium care.</div></div></div></div>
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160"><div class="icon-tile"><i class="bi bi-gift"></i><div><div class="icon-tile-title">Premium Packaging</div><div class="icon-tile-text">Gift-ready presentation and careful handling.</div></div></div></div>
-             </div>
-         </div>
-     </section>
- 
-     <section class="section-pad section-alt section-glow glow-right">
-         <div class="container">
-             <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4" data-aos="fade-up">
-                 <div>
-                     <div class="section-eyebrow home-picks-eyebrow">Top Picks</div>
-                     <h2 class="section-title home-picks-h2 mb-0">Best Sellers</h2>
-                 </div>
-                 <div class="d-flex gap-2">
-                     <button class="swiper-btn" id="bestPrev" aria-label="Previous"><i class="bi bi-arrow-left"></i></button>
-                     <button class="swiper-btn" id="bestNext" aria-label="Next"><i class="bi bi-arrow-right"></i></button>
-                 </div>
-             </div>
-             <div class="swiper" id="bestSellersSwiper" data-aos="fade-up" data-aos-delay="80">
-                 <div class="swiper-wrapper" id="bestSellersWrapper">
-                     <div class="swiper-slide">
-                         <div style="border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:14px;">
-                             <div class="ratio ratio-4x3" style="border-radius:16px; overflow:hidden;">
-                                 <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=1200&q=80" alt="Club De Nuit Intense" style="width:100%; height:100%; object-fit:cover;" />
-                             </div>
-                             <div class="mt-3">
-                                 <div class="fw-semibold">Club De Nuit Intense</div>
-                                 <div class="text-muted small">Armaf • Men</div>
-                                 <div class="d-flex align-items-center justify-content-between mt-2">
-                                     <div class="fw-semibold" style="color:rgba(212,175,55,.95)">₦42,000</div>
-                                     <a class="btn btn-gold btn-sm" href="pages/product-details.html?id=cdn-intense">Details</a>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="swiper-slide">
-                         <div style="border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:14px;">
-                             <div class="ratio ratio-4x3" style="border-radius:16px; overflow:hidden;">
-                                 <img src="https://images.unsplash.com/photo-1615485925600-97237f8133ab?auto=format&fit=crop&w=1200&q=80" alt="Versace Eros" style="width:100%; height:100%; object-fit:cover;" />
-                             </div>
-                             <div class="mt-3">
-                                 <div class="fw-semibold">Versace Eros</div>
-                                 <div class="text-muted small">Versace • Men</div>
-                                 <div class="d-flex align-items-center justify-content-between mt-2">
-                                     <div class="fw-semibold" style="color:rgba(212,175,55,.95)">₦60,000</div>
-                                     <a class="btn btn-gold btn-sm" href="pages/product-details.html?id=eros">Details</a>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="swiper-slide">
-                         <div style="border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:14px;">
-                             <div class="ratio ratio-4x3" style="border-radius:16px; overflow:hidden;">
-                                 <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=1200&q=80" alt="YSL Libre" style="width:100%; height:100%; object-fit:cover;" />
-                             </div>
-                             <div class="mt-3">
-                                 <div class="fw-semibold">YSL Libre</div>
-                                 <div class="text-muted small">Yves Saint Laurent • Women</div>
-                                 <div class="d-flex align-items-center justify-content-between mt-2">
-                                     <div class="fw-semibold" style="color:rgba(212,175,55,.95)">₦78,000</div>
-                                     <a class="btn btn-gold btn-sm" href="pages/product-details.html?id=libre">Details</a>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </section>
+    <section class="section" id="how-to-order" aria-labelledby="order-title">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="eyebrow">How to order</p>
+                <h2 id="order-title">Ordering takes <em>three steps</em></h2>
+                <p>Everything happens on WhatsApp, so you can ask questions before you buy.</p>
+            </div>
+            <ol class="steps">
+                <li class="step reveal">
+                    <span class="step-num">1</span>
+                    <h3>Message us</h3>
+                    <p>Tap any WhatsApp button on this page. Your message is written for you.</p>
+                </li>
+                <li class="step reveal">
+                    <span class="step-num">2</span>
+                    <h3>Choose your scent</h3>
+                    <p>Tell us your style and budget. We’ll share what is available and help you decide.</p>
+                </li>
+                <li class="step reveal">
+                    <span class="step-num">3</span>
+                    <h3>Confirm and receive</h3>
+                    <p>Confirm your order and we’ll arrange delivery around Porto-Novo and nearby.</p>
+                </li>
+            </ol>
+            <div class="center reveal">
+                <a class="btn btn-gold" href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I’d like to order a perfume. Can you help me choose?" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    Start your order
+                </a>
+            </div>
+        </div>
+    </section>
 
-     <section class="section-pad">
-         <div class="container">
-             <div class="row g-5 align-items-center">
-                 <div class="col-lg-6" data-aos="fade-right">
-                     <div class="section-eyebrow">About Chlyn’s</div>
-                     <h2 class="section-title">A boutique fragrance experience in Porto-Novo</h2>
-                     <p class="section-desc">We help you choose scents that match your style — from fresh daily wear to luxurious oud statements. Need help? Message us and we’ll recommend based on your taste.</p>
-                     <div class="d-flex gap-2 flex-wrap mt-3">
-                         <a href="pages/about.html" class="btn btn-gold">Read Our Story</a>
-                         <a href="pages/contact.html" class="btn btn-outline-gold">Contact</a>
-                     </div>
-                 </div>
-                 <div class="col-lg-6" data-aos="fade-left">
-                     <div class="about-split">
-                         <div class="about-split-img" style="background-image:url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1400&q=80');"></div>
-                         <div class="about-split-card">
-                             <div class="about-split-title">Need a recommendation?</div>
-                             <div class="about-split-text">Tell us your vibe: sweet, fresh, oud, floral, or long-lasting.</div>
-                             <a class="btn btn-outline-gold btn-sm mt-2" href="https://wa.me/2349046908664" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </section>
+    <section class="section section-alt" id="reviews" aria-labelledby="reviews-title">
+        <div class="container">
+            <div class="section-head reveal">
+                <p class="eyebrow">Reviews</p>
+                <h2 id="reviews-title">What our customers <em>say</em></h2>
+            </div>
+            <div class="reviews">
+                <figure class="review reveal">
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote>“The scent is premium and long-lasting. Great recommendation.”</blockquote>
+                    <figcaption>Aïcha, Porto-Novo</figcaption>
+                </figure>
+                <figure class="review reveal">
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote>“Fast WhatsApp response and lovely packaging. I’ll order again.”</blockquote>
+                    <figcaption>Junior, Cotonou</figcaption>
+                </figure>
+                <figure class="review reveal">
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote>“Their Arabian fragrances are top-tier. The scent really carries.”</blockquote>
+                    <figcaption>Mariam, Porto-Novo</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
 
-     <section class="section-pad section-alt section-glow glow-left">
-         <div class="container">
-             <div class="section-head" data-aos="fade-up">
-                 <div class="section-eyebrow">Testimonials</div>
-                 <h2 class="section-title">What Customers Say</h2>
-             </div>
-             <div class="row g-4" id="testimonialRow">
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="60"><div class="testimonial"><div class="stars">★★★★★</div><div class="quote">“The scent is premium and long-lasting. Great recommendation.”</div><div class="author">— Aïcha, Porto-Novo</div></div></div>
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="110"><div class="testimonial"><div class="stars">★★★★★</div><div class="quote">“Fast WhatsApp response, luxury packaging. I’ll order again.”</div><div class="author">— Junior, Cotonou</div></div></div>
-                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160"><div class="testimonial"><div class="stars">★★★★★</div><div class="quote">“Arabian fragrances are top-tier. Projection is strong.”</div><div class="author">— Mariam, Porto-Novo</div></div></div>
-             </div>
-             <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 mt-4" data-aos="fade-up">
-                 <button class="swiper-btn" id="testiPrev" type="button" aria-label="Previous testimonials"><i class="bi bi-arrow-left"></i></button>
-                 <div class="text-muted small" id="testiCount">Showing 1-3 of 3</div>
-                 <button class="swiper-btn" id="testiNext" type="button" aria-label="Next testimonials"><i class="bi bi-arrow-right"></i></button>
-             </div>
-         </div>
-     </section>
+    <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+            <div class="cta-band reveal">
+                <div>
+                    <p class="eyebrow">Need a recommendation?</p>
+                    <h2 id="contact-title">Tell us your <em>vibe</em></h2>
+                    <p>Sweet, fresh, oud, floral or long-lasting. Send us a message and we’ll find your scent.</p>
+                </div>
+                <a class="btn btn-gold" href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I’d like a recommendation. I like scents that are: " target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    Chat on WhatsApp
+                </a>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card reveal">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I have a question." data-wa-display target="_blank" rel="noopener">+229 61 18 39 34</a>
+                </div>
+                <div class="contact-card reveal">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                    <h3>Email</h3>
+                    <a href="mailto:charlineegblea02@gmail.com" data-email>charlineegblea02@gmail.com</a>
+                </div>
+                <div class="contact-card reveal">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <h3>Location</h3>
+                    <p>Porto-Novo, Benin Republic<br>Delivery around Porto-Novo and nearby</p>
+                </div>
+                <div class="contact-card reveal">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    <h3>Opening hours</h3>
+                    <p>Monday to Saturday: 9am to 7pm<br>Sunday: by appointment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
-     <section class="section-pad">
-         <div class="container">
-             <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4" data-aos="fade-up">
-                 <div>
-                     <div class="section-eyebrow">Gallery</div>
-                     <h2 class="section-title mb-0">Instagram Vibes</h2>
-                 </div>
-                 <a class="link-gold" href="pages/shop.html">Shop now <i class="bi bi-arrow-up-right"></i></a>
-             </div>
-             <div class="row g-3" data-aos="fade-up" data-aos-delay="60">
-                 <div class="col-6 col-md-4 col-lg-3"><div class="ig-tile" style="background-image:url('https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=800&q=80');"></div></div>
-                 <div class="col-6 col-md-4 col-lg-3"><div class="ig-tile" style="background-image:url('https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=800&q=80');"></div></div>
-                 <div class="col-6 col-md-4 col-lg-3"><div class="ig-tile" style="background-image:url('https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=800&q=80');"></div></div>
-                 <div class="col-6 col-md-4 col-lg-3"><div class="ig-tile" style="background-image:url('https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?auto=format&fit=crop&w=800&q=80');"></div></div>
-                 <div class="col-6 col-md-4 col-lg-3"><div class="ig-tile" style="background-image:url('https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=800&q=80');"></div></div>
-                 <div class="col-6 col-md-4 col-lg-3"><div class="ig-tile" style="background-image:url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80');"></div></div>
-                 <div class="col-6 col-md-4 col-lg-3"><div class="ig-tile" style="background-image:url('https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=800&q=80');"></div></div>
-                 <div class="col-6 col-md-4 col-lg-3"><div class="ig-tile" style="background-image:url('https://images.unsplash.com/photo-1615485925600-97237f8133ab?auto=format&fit=crop&w=800&q=80');"></div></div>
-             </div>
-         </div>
-     </section>
+<footer class="footer">
+    <div class="container footer-inner">
+        <a class="logo" href="#top">
+            <span class="logo-mark" aria-hidden="true">C</span>
+            <span class="logo-text">Chlyn’s <em>Fragrance</em></span>
+        </a>
+        <nav class="footer-links" aria-label="Footer">
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+            <a href="#how-to-order">How to order</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <p class="copyright">© <span data-year>2026</span> Chlyn’s Fragrance. All rights reserved.</p>
+    </div>
+</footer>
 
-     <section class="section-pad section-alt">
-         <div class="container">
-             <div class="newsletter" data-aos="fade-up">
-                 <div class="row align-items-center g-4">
-                     <div class="col-lg-7">
-                         <div class="newsletter-kicker">Community</div>
-                         <h3 class="newsletter-title">Join our WhatsApp group for drops, deals & recommendations</h3>
-                         <div class="newsletter-text">Get first access to new arrivals, exclusive bundles, and scent tips — straight from Chlyn’s Fragrance.</div>
-                     </div>
-                     <div class="col-lg-5">
-                         <div class="d-flex flex-column flex-lg-row gap-2 flex-wrap justify-content-lg-end">
-                             <a class="btn btn-gold" href="https://wa.me/2349046908664" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Join via WhatsApp</a>
-                             <a class="btn btn-outline-gold" href="pages/shop.html">Explore Shop</a>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </section>
+<a class="wa-float" href="https://wa.me/22961183934" data-wa="Hello Chlyn’s Fragrance, I’d like to order a perfume. Can you help me choose?" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+</a>
 
-     <footer class="footer">
-         <div class="container">
-             <div class="row g-4">
-                 <div class="col-lg-4">
-                     <div class="footer-brand">Chlyn’s Fragrance</div>
-                     <div class="footer-text">Luxury perfume selections curated for signature presence and premium gifting.</div>
-                     <div class="d-flex gap-3 mt-3">
-                         <a class="social" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                         <a class="social" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                         <a class="social" href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-                     </div>
-                 </div>
-                 <div class="col-6 col-lg-2">
-                     <div class="footer-title">Quick Links</div>
-                     <a class="footer-link" href="index.html">Home</a>
-                     <a class="footer-link" href="pages/shop.html">Shop</a>
-                     <a class="footer-link" href="pages/about.html">About</a>
-                     <a class="footer-link" href="pages/contact.html">Contact</a>
-                 </div>
-                 <div class="col-6 col-lg-3">
-                     <div class="footer-title">Contact</div>
-                     <div class="footer-text">Porto-Novo, Benin Republic</div>
-                     <a class="footer-link" href="mailto:ayanleyeemmanuel5@gmail.com"><i class="bi bi-envelope"></i> ayanleyeemmanuel5@gmail.com</a>
-                     <a class="footer-link" href="https://wa.me/2349046908664" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> +2349046908664</a>
-                 </div>
-                 <div class="col-lg-3">
-                     <div class="footer-title">Store Hours</div>
-                     <div class="footer-text">Mon - Sat: 9:00am - 7:00pm</div>
-                     <div class="footer-text">Sun: By appointment</div>
-                 </div>
-             </div>
-             <div class="footer-bottom">
-                 <div>© <span id="year"></span> Chlyn’s Fragrance. All rights reserved.</div>
-             </div>
-         </div>
-     </footer>
- 
-     <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-centered modal-lg">
-             <div class="modal-content luxury-modal">
-                 <div class="modal-header border-0">
-                     <h5 class="modal-title" id="quickViewTitle">Quick View</h5>
-                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                 </div>
-                 <div class="modal-body" id="quickViewBody"></div>
-             </div>
-         </div>
-     </div>
- 
-     <button id="themeToggle" class="float-theme" type="button" aria-label="Switch to light mode"><i class="bi bi-sun"></i></button>
-     <a class="float-whatsapp" href="https://wa.me/2349046908664" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
-     <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
- 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-     <script src="js/script.js"></script>
- </body>
- </html>
+<script src="js/settings.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

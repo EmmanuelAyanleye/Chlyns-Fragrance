@@ -1,70 +1,49 @@
-# Chlyn’s Fragrance (Frontend)
+# Chlyn’s Fragrance
 
-A responsive, luxury-themed perfume storefront built with **HTML**, **CSS (Bootstrap 5 + custom styles)** and **Vanilla JavaScript**.
+Landing page for Chlyn’s Fragrance, a perfume boutique in Porto-Novo, Benin.
 
-## Project Structure
+Live site: https://emmanuelayanleye.github.io/Chlyns-Fragrance/
 
-- `index.html`
-  - Homepage (hero, featured picks, categories, testimonials, etc.)
-- `pages/`
-  - `shop.html` (catalog + filters + pagination)
-  - `product-details.html` (product details + related + reviews)
-  - `cart.html` (cart + WhatsApp checkout)
-  - `about.html`
-  - `contact.html`
-- `css/style.css`
-  - Global styles, light/dark theme rules, section glow effects, floating buttons
-- `js/script.js`
-  - Product data, rendering, cart logic, quick view modal, pagination, theme toggle
+It is plain HTML, CSS and JavaScript with no backend and no build step. Every order button opens WhatsApp with a message already written for the customer, so all orders and questions go straight to the shop’s chat.
 
-## How To Run
+## Files
 
-### Option 1: Open directly (quickest)
-
-You can open `index.html` directly in your browser.
-
-### Option 2: Run with a local server (recommended)
-
-Some browsers restrict certain behaviors when opening HTML files directly. Use a local server instead.
-
-#### Using PowerShell (Python)
-
-If Python is installed:
-
-```powershell
-python -m http.server 5500
+```
+index.html       the page
+css/style.css    all styles
+js/settings.js   WhatsApp number and email
+js/main.js       WhatsApp links, mobile menu, scroll effects
+assets/          images and icon
 ```
 
-Then open:
+## Changing the WhatsApp number or email
 
-- `http://localhost:5500/`
+Open `js/settings.js` and edit the values:
 
-#### Using VS Code Live Server
+```js
+whatsapp: "22961183934",            // country code + number, digits only
+whatsappDisplay: "+229 61 18 39 34", // how it appears on the page
+email: "charlineegblea02@gmail.com",
+```
 
-- Install the **Live Server** extension
-- Right click `index.html` → **Open with Live Server**
+Every button on the page picks up the new values. The `href="https://wa.me/..."` written in `index.html` is only a fallback for browsers with JavaScript turned off, so update it there too if the number changes for good.
 
-## Features
+The message each button sends lives in its `data-wa` attribute in `index.html`. Change the text there to change the message.
 
-- **Luxury UI** with gold accents and premium card styling
-- **Responsive design** for mobile/tablet/desktop
-- **Shop page filtering** (search, category, sort, price range)
-- **Scalable pagination** with ellipses for large page counts
-- **Product details** page with gallery thumbnails and related products
-- **Cart** with quantity controls and WhatsApp checkout message
-- **Quick View modal**
-- **Light/Dark mode toggle** (floating button) with persistence via `localStorage`
-- **Floating buttons**: theme toggle, WhatsApp chat, back-to-top
-- **Homepage testimonials navigation** (Prev/Next)
-- **Subtle gold glow section backgrounds** (selected sections)
+## Running it locally
 
-## Notes
+Open `index.html` in a browser, or serve the folder:
 
-- WhatsApp number used throughout: `+2349046908664`
-- Location: Porto-Novo, Benin Republic
+```
+python3 -m http.server 8000
+```
 
-## Customization
+then visit http://localhost:8000.
 
-- Product data is stored in `js/script.js` in the `PRODUCTS` array.
-- Theme colors and major styling variables are in `css/style.css` under `:root`.
+## Hosting
 
+All paths are relative, so the site works from any folder or domain.
+
+**GitHub Pages:** Settings → Pages → Deploy from a branch → `main` / root. Pushes to `main` go live in a minute or two.
+
+**Netlify:** drag the folder into Netlify Drop, or connect the repo with no build command and `/` as the publish directory.
