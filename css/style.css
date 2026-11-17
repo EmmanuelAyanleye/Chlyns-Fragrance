@@ -306,6 +306,13 @@ body.menu-open .menu-btn .i-close { display: block; }
   .steps { grid-template-columns: 1fr; }
 }
 
+/* Phones held sideways: keep the whole menu on screen */
+@media (max-width: 900px) and (max-height: 520px) {
+  .nav { padding: 12px 20px 20px; }
+  .nav > a:not(.btn) { font-size: 1.3rem; padding: 8px 0; }
+  .nav-cta { margin-top: 16px; min-height: 48px; }
+}
+
 @media (max-width: 600px) {
   .container { width: calc(100% - 32px); }
   .collections, .reviews, .features { grid-template-columns: 1fr; }
