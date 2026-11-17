@@ -2,7 +2,7 @@
 
 Landing page for Chlyn’s Fragrance, a perfume boutique in Porto-Novo, Benin.
 
-Live site: https://emmanuelayanleye.github.io/Chlyns-Fragrance/
+Live site: https://chlyns-fragrance.netlify.app/
 
 It is plain HTML, CSS and JavaScript with no backend and no build step. Every order button opens WhatsApp with a message already written for the customer, so all orders and questions go straight to the shop’s chat.
 
